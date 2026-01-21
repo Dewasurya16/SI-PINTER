@@ -119,9 +119,6 @@ refactor: rapikan struktur kode
 Active Development  
 Digunakan untuk kebutuhan **internal instansi**.
 
----
 
-## 👤 Project Lead
-Dewa Surya
 
 ⚠️ Aplikasi ini bersifat internal dan tidak untuk penggunaan publik.

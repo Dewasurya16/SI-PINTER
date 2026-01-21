@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SI-PINTER  
+Sistem Informasi Pelaporan IT & Helpdesk Internal
 
-## Getting Started
+SI-PINTER adalah aplikasi **IT Helpdesk internal (1 instansi)** yang digunakan untuk pelaporan kendala IT, diskusi, serta penyimpanan solusi (knowledge base) agar dapat digunakan kembali oleh pegawai.
 
-First, run the development server:
+Aplikasi ini dikembangkan secara **kolaboratif menggunakan GitHub**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🎯 Tujuan
+- Memudahkan pegawai melaporkan kendala IT
+- Mengurangi laporan berulang untuk masalah yang sama
+- Menyediakan pusat solusi / knowledge internal
+- Mendukung kolaborasi antara pegawai dan tim IT
+
+---
+
+## 🏗️ Tech Stack
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- MySQL
+- Prisma ORM
+
+---
+
+## ✨ Fitur Utama
+- Autentikasi User & Admin
+- Pelaporan tiket kendala IT
+- Beranda (feed) ala sosial media internal
+- Komentar & diskusi pada tiket
+- Knowledge Base (kendala & solusi)
+- Multi-user (1 instansi)
+- Hak akses berbasis role
+
+---
+
+## 📁 Struktur Project (Ringkas)
+```
+app/
+├─ (auth)/
+├─ (dashboard)/
+│  ├─ feed/
+│  ├─ tickets/
+│  ├─ knowledge/
+│  └─ admin/
+├─ api/
+prisma/
+docs/
+components/
+lib/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Cara Menjalankan (Local Development)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Clone Repository
+```bash
+git clone https://github.com/Dewasurya16/SI-PINTER.git
+cd SI-PINTER
+```
 
-## Learn More
+### 2. Install Dependency
+```bash
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 3. Konfigurasi Environment
+Salin file `.env.example` menjadi `.env`, lalu sesuaikan:
+```env
+DATABASE_URL="mysql://user:password@localhost:3306/si_pinter"
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. Migrasi Database
+```bash
+npx prisma migrate dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 5. Jalankan Aplikasi
+```bash
+npm run dev
+```
 
-## Deploy on Vercel
+Akses melalui browser:
+```
+http://localhost:3000
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 👥 Aturan Kerja Tim
+
+### Branching Strategy
+- `main` → Production (tidak boleh direct push)
+- `develop` → Integrasi fitur
+- `feature/*` → Pengembangan fitur
+
+---
+
+### Format Commit
+```
+feat: tambah fitur feed
+fix: perbaiki bug komentar
+refactor: rapikan struktur kode
+```
+
+---
+
+## 📌 Catatan Penting
+- Jangan commit file `.env`
+- Jangan mengubah `schema.prisma` tanpa koordinasi
+- Satu fitur dikerjakan dalam satu branch
+- Pull Request wajib direview
+
+---
+
+## 📍 Status Project
+Active Development  
+Digunakan untuk kebutuhan **internal instansi**.
+
+---
+
+## 👤 Project Lead
+Dewa Surya
+
+⚠️ Aplikasi ini bersifat internal dan tidak untuk penggunaan publik.

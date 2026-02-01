@@ -120,5 +120,8 @@ Active Development
 Digunakan untuk kebutuhan **internal instansi**.
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0e1b5c13bae3806aaed7f24a1fa5baa8493751e2
 ⚠️ Aplikasi ini bersifat internal dan tidak untuk penggunaan publik.
